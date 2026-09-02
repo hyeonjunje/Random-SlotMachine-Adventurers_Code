@@ -75,13 +75,11 @@ Unity로 개발한 2D 로그라이크 팀 프로젝트의 포트폴리오용 코
 
 ### 4. CSV → ScriptableObject 데이터 파이프라인 및 커스텀 에디터 툴
 
-기획 데이터 문서를 게임에서 안전하게 활용하기 위해 CSV 데이터를 ScriptableObject로 변환하고 검증하는 에디터 도구를 구현했습니다.
+기획 데이터 문서를 게임에서 안전하게 활용하기 위한 CSV → ScriptableObject 변환·검증 파이프라인을 설계했습니다.
 
-- [`UnifiedDataImportWindow`](Assets/4.Scripts/Editor/Core/UnifiedDataImportWindow.cs)에서 여러 데이터 문서를 한 화면에서 검사·미리보기·일괄 임포트
-- [`DataImporterBase`](Assets/4.Scripts/Editor/Core/DataImporterBase.cs)를 추상 부모 클래스로 두어 새 데이터 타입의 임포터를 확장 가능하게 설계
-- 리플렉션으로 `DataImporterBase`를 상속한 임포터를 자동 탐색
-- 빈 값, 중복 ID, 형식 오류, 참조 오류, DSL 오류 등 데이터 검증 지원
-- 오류가 있는 CSV는 임포트를 막아 런타임 이전에 데이터 문제를 확인할 수 있도록 구성
+- 데이터 입력·출력 구조, 검증 규칙, 오류 유형 및 사용자 흐름 정의
+- `DataImporterBase` 기반의 확장 구조와 `UnifiedDataImportWindow`의 화면·기능 요구사항 설계
+- AI 보조 구현을 바탕으로 결과물을 검토·통합하고, 프로젝트 데이터 구조에 맞게 적용
 
 ![Unified Data Import Window](docs/images/contributions/data-import-window.png)
 
