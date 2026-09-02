@@ -1,0 +1,232 @@
+/* ========================================
+   Enemy AI Graph Editor - USS Stylesheet
+   ======================================== */
+
+/* 배경 그리드 */
+GridBackground {
+    --grid-background-color: #1e1e2e;
+    --line-color: rgba(255, 255, 255, 0.05);
+    --thick-line-color: rgba(255, 255, 255, 0.08);
+    --spacing: 25;
+}
+
+/* 툴바 */
+.toolbar {
+    flex-direction: row;
+    background-color: #2d2d3d;
+    height: 30px;
+    padding: 2px 8px;
+    align-items: center;
+    border-bottom-width: 1px;
+    border-bottom-color: #1a1a2a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.toolbar-title {
+    color: #e0e0ff;
+    font-size: 13px;
+    -unity-font-style: bold;
+    flex-grow: 1;
+}
+
+.toolbar-button {
+    background-color: #3d3d5c;
+    color: #c0c0ff;
+    border-radius: 4px;
+    border-width: 0;
+    padding: 3px 10px;
+    margin-left: 4px;
+    font-size: 12px;
+}
+
+.toolbar-button:hover {
+    background-color: #5050a0;
+    color: #ffffff;
+}
+
+/* 노드 기본 */
+.node {
+    min-width: 280px;
+}
+
+/* 시작 노드 강조 */
+.start-node #title {
+    background-color: #2a6b3a;
+}
+
+.start-node #title Label {
+    color: #90ff90;
+    -unity-font-style: bold;
+}
+
+/* 노드 바디 */
+.node-body {
+    padding: 8px;
+    background-color: rgba(40, 40, 60, 0.8);
+}
+
+/* 섹션 헤더 */
+.section-header {
+    color: #8888cc;
+    font-size: 11px;
+    -unity-text-align: middle-center;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    -unity-font-style: bold;
+}
+
+/* 빈 라벨 */
+.empty-label {
+    color: #666688;
+    font-size: 11px;
+    -unity-text-align: middle-center;
+    -unity-font-style: italic;
+    margin: 4px 0;
+}
+
+/* 행동 컨테이너 */
+.act-container {
+    background-color: rgba(50, 50, 80, 0.6);
+    border-radius: 6px;
+    margin: 4px 0;
+    padding: 6px;
+    border-left-width: 3px;
+    border-left-color: #6688ff;
+}
+
+.act-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.act-name {
+    color: #aabbff;
+    font-size: 12px;
+    -unity-font-style: bold;
+}
+
+/* 전이 컨테이너 */
+.transition-container {
+    background-color: rgba(80, 50, 30, 0.6);
+    border-radius: 6px;
+    margin: 4px 0;
+    padding: 6px;
+    border-left-width: 3px;
+    border-left-color: #ff8844;
+}
+
+.transition-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.transition-name {
+    color: #ffbb88;
+    font-size: 12px;
+    -unity-font-style: bold;
+}
+
+.transition-target {
+    color: #cc9966;
+    font-size: 11px;
+    margin-left: 8px;
+}
+
+/* 삭제 버튼 */
+.delete-button {
+    background-color: #aa3333;
+    color: #ffffff;
+    border-radius: 3px;
+    border-width: 0;
+    padding: 1px 6px;
+    font-size: 10px;
+    min-width: 20px;
+    max-height: 18px;
+}
+
+.delete-button:hover {
+    background-color: #dd4444;
+}
+
+/* 추가 버튼 */
+.add-button {
+    background-color: #334466;
+    color: #88aadd;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #446688;
+    padding: 3px 8px;
+    margin-top: 4px;
+    font-size: 11px;
+    -unity-text-align: middle-center;
+}
+
+.add-button:hover {
+    background-color: #446688;
+    color: #bbddff;
+}
+
+/* 인스펙터 버튼 */
+.inspect-button {
+    background-color: #3d3d5c;
+    color: #aaaadd;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #555580;
+    padding: 4px 8px;
+    margin-top: 8px;
+    font-size: 12px;
+    -unity-text-align: middle-center;
+}
+
+.inspect-button:hover {
+    background-color: #5555a0;
+    color: #ffffff;
+}
+
+/* 이펙트 정보 */
+.effects-info {
+    color: #8888aa;
+    font-size: 10px;
+    -unity-font-style: italic;
+    margin-top: 4px;
+}
+
+/* 포트 스타일 */
+.port > #type {
+    font-size: 10px;
+}
+
+/* SerializedProperty 인라인 편집 */
+.serialized-property-field {
+    margin: 4px 0;
+    padding: 4px;
+    background-color: rgba(30, 30, 50, 0.5);
+    border-radius: 4px;
+}
+
+/* 서브 섹션 헤더 */
+.sub-section-header {
+    color: #9999cc;
+    font-size: 11px;
+    -unity-font-style: bold;
+    margin-top: 6px;
+    margin-bottom: 2px;
+}
+
+/* 리사이즈 핸들 */
+.resize-handle {
+    cursor: resize-horizontal;
+}
+
+.resize-handle:hover {
+    background-color: rgba(100, 150, 255, 0.3);
+}

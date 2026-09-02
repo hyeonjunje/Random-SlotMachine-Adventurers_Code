@@ -1,0 +1,4 @@
+﻿public readonly struct StEnterRestNodeEvent
+{
+
+}
