@@ -13,3 +13,4 @@ Unity로 개발한 2D 로그라이크 팀 프로젝트의 포트폴리오용 코
 전투가 시작되면 슬롯머신을 돌려 하단 슬롯에 배치할 토큰을 획득합니다. 토큰의 배치 순서와 적의 속도를 함께 계산해 행동 순서가 정해지며, 이후 전투는 자동으로 진행됩니다. 어떤 토큰을 얻고 어느 순서로 배치하느냐에 따라 매 전투의 전략이 달라집니다.
 
 ![슬롯 토큰 기반 자동 전투 화면](docs/images/battle.png)
+<img width="836" height="465" alt="image" src="https://github.com/user-attachments/assets/965aee02-bd5c-4215-900a-fbc9d95309dd" />
